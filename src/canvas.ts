@@ -12,6 +12,7 @@ export class canvas
         c.zoom = 1;
         
         c.element = <HTMLCanvasElement>document.getElementById(id);
+        c.ctx = c.element.getContext('2d');
         
         c.refresh();
         
@@ -42,7 +43,7 @@ export class canvas
     }
     
     cam: camera;
-    context : CanvasRenderingContext2D;
+    ctx : CanvasRenderingContext2D;
     size: v2d;
     zoom: number;
     

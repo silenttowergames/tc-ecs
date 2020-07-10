@@ -4,6 +4,7 @@
   "description": "",
   "main": "webpack.config.js",
   "dependencies": {
+    "phanx-ecs": "0.0.12",
     "ts-loader": "^8.0.0",
     "typescript": "^3.9.6",
     "webpack": "^4.43.0"
