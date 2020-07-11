@@ -8,11 +8,9 @@ export class AnimationSystem
         let s : sprite;
         let _s : any;
         
-        for(_s in w.get('sprite'))
+        for(_s of w.get('sprite'))
         {
             s = <sprite>_s;
-            
-            continue;
             
             const animation = s.sheet.animations[s.animationID];
             

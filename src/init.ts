@@ -18,8 +18,13 @@ function init() : void
     const spriteSheets : Array<SpriteSheet> = [
         SpriteSheet.create("easter-16x16", v2d.create(16, 16), {
             protagIdle: [
-                [ 6, 0, 5, ],
-                [ 5, 0, 5, ],
+                [ 6, 0, 10, ],
+                [ 5, 0, 10, ],
+            ],
+            
+            bunnyIdle: [
+                [ 0, 0, 15, ],
+                [ 1, 0, 15, ],
             ],
         }),
     ];
@@ -29,6 +34,10 @@ function init() : void
             let entity : number = w.new();
             w.add(entity, body.create(32, 16));
             w.add(entity, sprite.create(spriteSheets[0], 'protagIdle'));
+            
+            entity = w.new();
+            w.add(entity, body.create(64, 64));
+            w.add(entity, sprite.create(spriteSheets[0], 'bunnyIdle'));
         },
     };
     
