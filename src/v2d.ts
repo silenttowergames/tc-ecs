@@ -9,6 +9,6 @@ export class v2d
         return ret;
     }
     
-    X: number;
-    Y: number;
+    X: number = 0;
+    Y: number = 0;
 }

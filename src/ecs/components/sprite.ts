@@ -19,6 +19,7 @@ export class sprite extends component
     }
     
     animationID : string;
+    flipX: boolean = false;
     frameID : number = 0;
     frameDuration : number = 0;
     sheet : SpriteSheet;

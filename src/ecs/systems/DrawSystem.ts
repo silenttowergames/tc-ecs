@@ -30,8 +30,8 @@ export class DrawSystem extends system
                 frame.Y * s.sheet.tilesize.Y,
                 s.sheet.tilesize.X,
                 s.sheet.tilesize.Y,
-                b.position.X * zoom,
-                b.position.Y * zoom,
+                (b.position.X - (s.sheet.tilesize.X / 2)) * zoom,
+                (b.position.Y - (s.sheet.tilesize.Y / 2)) * zoom,
                 s.sheet.tilesize.X * zoom,
                 s.sheet.tilesize.Y * zoom
             );

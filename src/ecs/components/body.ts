@@ -8,6 +8,7 @@ export class body extends component
         const b = new body();
         
         b.position = v2d.create(X, Y);
+        b.velocity = new v2d();
         
         return b;
     }
@@ -18,4 +19,5 @@ export class body extends component
     }
     
     position : v2d;
+    velocity : v2d;
 }

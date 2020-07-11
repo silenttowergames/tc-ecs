@@ -114,6 +114,7 @@ export class world
     canvas : canvas;
     components;
     entityCount : number = 0;
+    focused : boolean = true;
     nextScene : string = null;
     spriteSheets: Array<SpriteSheet>;
     systems: Array<system>;
