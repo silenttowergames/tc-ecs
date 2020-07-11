@@ -1,6 +1,7 @@
 import { system } from "./system";
 import { component } from "./component";
 import { canvas } from "../canvas";
+import { SpriteSheet } from "../rendering/SpriteSheet";
 
 export class world
 {
@@ -85,9 +86,35 @@ export class world
         return this.components.types[cClass] ?? [];
     }
     
+    getEntitiesWith(cClass : string) : Array<number>
+    {
+        const ret : Array<number> = [];
+        
+        for(const c of this.get(cClass))
+        {
+            ret.push(c.entity);
+        }
+        
+        return ret;
+    }
+    
+    getComponentForEntity(entity: number, cClass : string) : component
+    {
+        for(const c of this.get(cClass))
+        {
+            if(c.entity == entity)
+            {
+                return c;
+            }
+        }
+        
+        return null;
+    }
+    
     canvas : canvas;
     components;
     entityCount : number = 0;
     nextScene : string = null;
+    spriteSheets: Array<SpriteSheet>;
     systems: Array<system>;
 }

@@ -44,8 +44,7 @@ export class canvas
     
     cam: camera;
     ctx : CanvasRenderingContext2D;
+    element : HTMLCanvasElement;
     size: v2d;
     zoom: number;
-    
-    private element : HTMLCanvasElement;
 }
